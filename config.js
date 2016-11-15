@@ -1,12 +1,14 @@
-  // Don't commit this file to your public repos. This config is for first-run
-  //
- exports.creds = {
- 	returnURL: 'https://aad-dev-test.herokuapp.com/',
- 	identityMetadata: 'https://login.microsoftonline.com/common/.well-known/openid-configuration', // For using Microsoft you should never need to change this.
- 	clientID: 'f3a1b3d0-3586-48b7-8844-aaacbf75c33f',
- 	clientSecret: 'GZcx4Dq+Qs7KaH+f1S8Sc4QyZ2HtgaFAf+jTgpHQEws=', // if you are doing code or id_token code
- 	skipUserProfile: true, // for AzureAD should be set to true.
- 	responseType: 'id_token code', // for login only flows use id_token. For accessing resources use `id_token code`
- 	responseMode: 'query' // For login only flows we should have token passed back to us in a POST
- 	//scope: ['email', 'profile'] // additional scopes you may wish to pass
- };
+// Don't commit this file to your public repos. This config is for first-run
+//
+exports.creds = {
+    // Required. It must be tenant-specific endpoint, common endpoint is not supported to use B2C
+    // feature.
+    identityMetadata: 'https://login.microsoftonline.com/aaddevtest.onmicrosoft.com/v2.0/.well-known/openid-configuration',
+    returnURL: 'https://aad-dev-test.herokuapp.com/',
+    clientID: '510cab99-0c1c-4a9d-9e49-3c7bb707222b',
+    clientSecret: 'GZcx4Dq+Qs7KaH+f1S8Sc4QyZ2HtgaFAf+jTgpHQEws=', // if you are doing code or id_token code
+    skipUserProfile: true, // for AzureAD should be set to true.
+    responseType: 'id_token code', // for login only flows use id_token. For accessing resources use `id_token code`
+    responseMode: 'query' // For login only flows we should have token passed back to us in a POST
+    //scope: ['email', 'profile'] // additional scopes you may wish to pass
+};
