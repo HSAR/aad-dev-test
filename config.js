@@ -1,7 +1,7 @@
   // Don't commit this file to your public repos. This config is for first-run
   //
  exports.creds = {
- 	returnURL: 'https://aad-dev-test.herokuapp.com/auth/openid/return',
+ 	returnURL: 'https://aad-dev-test.herokuapp.com/',
  	identityMetadata: 'https://login.microsoftonline.com/common/.well-known/openid-configuration', // For using Microsoft you should never need to change this.
  	clientID: 'f3a1b3d0-3586-48b7-8844-aaacbf75c33f',
  	clientSecret: 'GZcx4Dq+Qs7KaH+f1S8Sc4QyZ2HtgaFAf+jTgpHQEws=', // if you are doing code or id_token code
