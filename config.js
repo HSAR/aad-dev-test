@@ -3,8 +3,8 @@
  exports.creds = {
  	returnURL: 'https://aad-dev-test.herokuapp.com/auth/openid/return',
  	identityMetadata: 'https://login.microsoftonline.com/common/.well-known/openid-configuration', // For using Microsoft you should never need to change this.
- 	clientID: 'f3a1b3d0-3586-48b7-8844-aaacbf75c33f',
- 	clientSecret: 'GZcx4Dq+Qs7KaH+f1S8Sc4QyZ2HtgaFAf+jTgpHQEws=', // if you are doing code or id_token code
+ 	clientID: '34e404cc-f9b9-4e74-b434-9f12798fdd8c',
+ 	clientSecret: 'l66SE+4qrb7kDelCkO5qS5B0cYXRJkyslTZouPUZl+Y=', // if you are doing code or id_token code
  	skipUserProfile: true, // for AzureAD should be set to true.
  	responseType: 'id_token code', // for login only flows use id_token. For accessing resources use `id_token code`
  	responseMode: 'query', // For login only flows we should have token passed back to us in a POST
