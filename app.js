@@ -139,11 +139,11 @@ app.get('/', function (req, res) {
     res.render('index', {user: req.user});
 });
 
-app.get('/account', ensureAuthenticated, function (req, res) {
+app.get('/account/', ensureAuthenticated, function (req, res) {
     res.render('account', {user: req.user});
 });
 
-app.get('/login',
+app.get('/login/',
     passport.authenticate('azuread-openidconnect', {failureRedirect: '/login'}),
     function (req, res) {
         log.info('Login was called in the Sample');
@@ -155,7 +155,7 @@ app.get('/login',
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-app.get('/auth/openid/return',
+app.get('/auth/openid/return/',
     passport.authenticate('azuread-openidconnect', {failureRedirect: '/login'}),
     function (req, res) {
         log.info('We received a return from AzureAD.');
@@ -168,7 +168,7 @@ app.get('/auth/openid/return',
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-app.post('/auth/openid/return',
+app.post('/auth/openid/return/',
     passport.authenticate('azuread-openidconnect', {failureRedirect: '/login'}),
     function (req, res) {
         log.info('We received a return from AzureAD.');
