@@ -178,7 +178,7 @@ app.post('/auth/openid/return',
 app.get('/logout', function (req, res) {
     req.session.destroy(function (err) {
         req.logOut();
-        res.redirect('https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=http://localhost:3000');
+        res.redirect('https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=http://localhost:' + app.get('port'));
     });
 
 });
