@@ -83,9 +83,11 @@ passport.use(new OIDCStrategy({
         clientSecret: config.creds.clientSecret,
         oidcIssuer: config.creds.issuer,
         identityMetadata: config.creds.identityMetadata,
+        scope: config.creds.scope,
         skipUserProfile: config.creds.skipUserProfile,
         responseType: config.creds.responseType,
-        responseMode: config.creds.responseMode
+        responseMode: config.creds.responseMode,
+        validateIssuer: config.creds.validateIssuer
     },
     function (iss, sub, profile, accessToken, refreshToken, done) {
         console.log(JSON.stringify(profile));
