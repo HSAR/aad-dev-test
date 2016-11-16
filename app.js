@@ -88,6 +88,7 @@ passport.use(new OIDCStrategy({
         responseMode: config.creds.responseMode
     },
     function (iss, sub, profile, accessToken, refreshToken, done) {
+        console.log(JSON.stringify(profile));
         if (!profile.email) {
             return done(new Error("No email found"), null);
         }
