@@ -1,8 +1,9 @@
 // Don't commit this file to your public repos. This config is for first-run
 //
 exports.creds = {
-    // Required. It must be tenant-specific endpoint, common endpoint is not supported to use B2C
-    // feature.
+    // Required. It must be tenant-specific endpoint, common endpoint is not supported to use B2C.
+    // or you can use the common endpoint
+    // 'https://login.microsoftonline.com/common/.well-known/openid-configuration'
     identityMetadata: 'https://login.microsoftonline.com/aaddevtest.onmicrosoft.com/v2.0/.well-known/openid-configuration',
     returnURL: 'https://aad-dev-test.herokuapp.com/auth/openid/return/',
     clientID: '510cab99-0c1c-4a9d-9e49-3c7bb707222b',
@@ -13,7 +14,7 @@ exports.creds = {
     // Required if we use http for redirectUrl
     allowHttpForRedirectUrl: true,
     // Scopes info: https://docs.microsoft.com/en-gb/azure/active-directory/active-directory-v2-scopes
-    scope: 'profile',
+    scope: 'openid',
     // Required to set to false if you don't want to validate issuer
     validateIssuer: false,
     // Required if you want to provide the issuer(s) you want to validate instead of using the issuer from metadata
