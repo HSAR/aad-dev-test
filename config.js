@@ -15,7 +15,7 @@ exports.creds = {
     // Scopes info: https://docs.microsoft.com/en-gb/azure/active-directory/active-directory-v2-scopes
     scope: 'profile',
     // Required to set to false if you don't want to validate issuer
-    validateIssuer: false,
+    validateIssuer: true
     // Required if you want to provide the issuer(s) you want to validate instead of using the issuer from metadata
-    issuer: null
+    //issuer: null
 };
