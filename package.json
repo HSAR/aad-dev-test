@@ -6,7 +6,6 @@
         "ejs": ">= 0.0.0",
         "ejs-locals": ">= 0.0.0",
         "restify": "*",
-        "mongoose": "*",
         "bunyan": "*",
         "assert-plus": "*",
         "passport": "*",
