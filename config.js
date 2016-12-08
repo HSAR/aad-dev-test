@@ -4,8 +4,8 @@ exports.creds = {
     // Required. It must be tenant-specific endpoint, common endpoint is not supported to use B2C feature.
     identityMetadata: 'https://login.microsoftonline.com/aaddevtest.onmicrosoft.com/v2.0/.well-known/openid-configuration',
     returnURL: 'https://aad-dev-test.herokuapp.com/auth/openid/return/',
-    clientID: 'fa214e73-bed7-4367-a7f6-a3f69b1968b9',
-    clientSecret: 'PLZogOq61PXxFsJuKuwRnUU', // if you are doing code or id_token code
+    clientID: 'f4adb8d5-1f30-417a-8828-eece029c7c37',
+    clientSecret: 'N2APTu35gRV9tj1MA88ob57', // if you are doing code or id_token code
     skipUserProfile: true, // for AzureAD should be set to true.
     responseType: 'id_token code', // for login only flows use id_token. For accessing resources use `id_token code`
     responseMode: 'form_post',
